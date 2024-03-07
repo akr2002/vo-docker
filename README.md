@@ -17,9 +17,10 @@ docker build -t vo .
 docker run -it --rm -e DISPLAY=$DISPLAY -e ALSA_CARD=sofhdadsp --device /dev/snd --device /dev/dri/card0 -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /home/user/.vendetta:/root/.vendetta vo
 ```
 First time only: Install the client
+
 6. Play as usual.
 
-Next time onwards you just need to follow steps 6 and 7 (and 5 if you shut down your computer).
+Next time onwards you just need to follow steps 5 and 6 (and 4 if you shut down your computer).
 
 ## Known issues:
 1. You cannot write into `~/.vendetta` as unprivileged user on host machine. This is by design. You can always place plugins as root or use the container to do the same.
